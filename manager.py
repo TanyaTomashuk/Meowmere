@@ -3,6 +3,7 @@ from player import *
 from camera import *
 from music import *
 from mob import *
+from music import *
 clock = pygame.time.Clock()
 pygame.init()
 
@@ -25,6 +26,8 @@ def update_fps():
     fps_text = Tanya.labelFont.render(fps, 1, pygame.Color(RED))
     return fps_text
 
+
+Music.music()
 
 Music.music()
 
