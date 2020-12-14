@@ -58,9 +58,17 @@ while True:
         if event.type == pygame.MOUSEBUTTONDOWN:
             if event.button == 1:
                 Tanya.destroy(World.tile_surface, event, World.game_map, TILE_SIZE_x=World.TILE_SIZE_x,
+<<<<<<< HEAD
                               TILE_SIZE_y = World.TILE_SIZE_y, camera=Camera.scroll_speed)
                 Max.hit_mob(event, Camera.scroll_speed)
+=======
+                              TILE_SIZE_y=World.TILE_SIZE_y, camera=Camera.scroll_speed)
+                Max.hit_mob(event, Camera.scroll_speed, Tanya.num, Tanya.sword.object_inventory)
+>>>>>>> 6ee88a2... added christmas tree sword, remained to add death mob and hero
                 Tanya.inventory_item_movement(event, Tanya.ground)
+                Tanya.inventory_item_movement(event, Tanya.grass)
+                Tanya.inventory_item_movement(event, Tanya.stone)
+
             if event.button == 3:
                 Tanya.build(World.tile_surface, event, World.game_map, TILE_SIZE_x=World.TILE_SIZE_x,
 <<<<<<< HEAD
@@ -69,8 +77,20 @@ while True:
             Tanya.mouse = event.pos
             if event.buttons[0]:
                 Tanya.object_inventory_moving(event, World.display, Tanya.ground)
+<<<<<<< HEAD
 =======
                               TILE_SIZE_y = World.TILE_SIZE_y, camera=Camera.scroll_speed)
+=======
+                Tanya.object_inventory_moving(event, World.display, Tanya.grass)
+                Tanya.object_inventory_moving(event, World.display, Tanya.stone)
+
+            if not event.buttons[0]:
+                Tanya.ground.moving = False
+                Tanya.grass.moving = False
+                Tanya.stone.moving = False
+
+
+>>>>>>> 6ee88a2... added christmas tree sword, remained to add death mob and hero
 
 >>>>>>> 67b1ac6... added simple music
     World.screen.set_alpha(None)
